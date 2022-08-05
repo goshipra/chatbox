@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link type="text/css"  rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+</head>
+<body>
+<div class="heading"><h1 >Welcome to Bushiban Chat Support</h1>
+</div>
+
+<div class="chat-contents">
+    <br>
+    <a href="https://bushiban.com/martial-arts-classes/Texas/League-City/2988"> Please visit our Website </a>
+    <div class="address">
+    <p > Address:
+        <br>
+        103 Davis Rd Suite V,
+        League City, Texas 77573
+        832-632-1342
+        <br> <br>
+        Email: BushiBanLeagueCity@gmail.com
+        <br> <br>
+        LEAGUE CITY:
+        <br>
+        Kids Martial Arts in League City
+
+        <br>
+        <br>
+        <br>
+        HOURS OF OPERATION:
+        <br> <br>
+        Operating hours during the summer season are Monday thru Friday, 6 AM to 8 PM.
+        <br> <br>
+        Private lessons are conducted on weekend mornings.
+    </p>
+    </div>
+    </div>
+
+
+<div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Chat support</h4>
+                    <p class="chatbox__description--header">Hi. My name is Sam. How can I help you?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
