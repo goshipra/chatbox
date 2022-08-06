@@ -1,5 +1,6 @@
 from flask import Flask, render_template,request,jsonify
 import json
+from flask_cors import CORS
 import requests
 from pprint import pprint
 import urllib3
@@ -12,6 +13,7 @@ POST_HEADERS = {'Content-Type': 'application/json', 'Authorization': f'Bearer {T
 SSL_VERIFY = False
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def home():

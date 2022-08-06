@@ -48,8 +48,8 @@ class Chatbox {
 
         fetch('http://127.0.0.1:5000/predict', {
             method: 'POST',
-            body: JSON.stringify({ message: text1 }),
             mode: 'cors',
+            body: JSON.stringify({ message: text1 }),
             headers: {
               'Content-Type': 'application/json'
             },
