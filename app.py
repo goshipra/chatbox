@@ -39,7 +39,7 @@ def greetings():
     can be changed or left empty.
     """
     json_data_greeting = json.dumps({"user": {"firstName": "Shipra", "lastName": "Rathore", \
-                                              "email": "rathoreshipra7061@students.itu.edu"}, \
+                                              "email": ""}, \
                                      "languageCode": "en", "type": "greeting", \
                                      "content": ''})
 
@@ -74,7 +74,7 @@ def predict():
     print("user message: ", text)
 
     json_data = json.dumps({"user": {"firstName": "Shipra", "lastName": "Rathore", \
-                                     "email": "rathoreshipra7061@students.itu.edu"}, \
+                                     "email": ""}, \
                             "languageCode": "en", "type": "message", \
                             "content": text})
 
