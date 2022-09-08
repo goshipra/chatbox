@@ -2,6 +2,7 @@
 Hi, Welcome!
 
 This is Virtual Agent Chat bot template Project.I created this simple project from scratch in which HTML, CSS python flask is used. 
+This virtual chatbot gets replies of user questions from People reign AI model. 
 
 # Project setup
 If you do need to set the project up locally yourself, feel free to follow these instructions:
@@ -37,3 +38,4 @@ JavaScript  static/js/app.js
 <img width="1438" alt="chatbox" src="https://user-images.githubusercontent.com/82234491/189180085-03d5c9c9-b9c1-4e0b-b063-cdbacef11eb2.png">
 <img width="1438" alt="chatbox2" src="https://user-images.githubusercontent.com/82234491/189180157-29b9053e-c638-4547-bbc7-5df8d96a452f.png">
 
+Reference for Chatbot template : https://www.youtube.com/watch?v=a37BL0stIuM
