@@ -37,5 +37,8 @@ JavaScript  static/js/app.js
 # Some Screen Shots of the project
 <img width="1438" alt="chatbox" src="https://user-images.githubusercontent.com/82234491/189180085-03d5c9c9-b9c1-4e0b-b063-cdbacef11eb2.png">
 <img width="1438" alt="chatbox2" src="https://user-images.githubusercontent.com/82234491/189180157-29b9053e-c638-4547-bbc7-5df8d96a452f.png">
+![chatbox](https://user-images.githubusercontent.com/82234491/189185289-ff504d55-623c-433f-8db8-d85aa1c7bd3b.gif)
+![chatbox_Demo](https://user-images.githubusercontent.com/82234491/189185472-9dff5d6f-601d-4d8b-9867-bc59759363e6.gif)
+
 
 Reference for Chatbot template : https://www.youtube.com/watch?v=a37BL0stIuM
