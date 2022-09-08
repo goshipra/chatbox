@@ -1,3 +1,6 @@
+// app.js
+// Author : Shipra Rathore
+//Chatbox function has open button, chatbox, send button which invokes functions
 class Chatbox {
     constructor() {
         this.args = {
@@ -9,7 +12,7 @@ class Chatbox {
         this.state = false;
         this.messages = [];
     }
-
+// Dislpay the message which it got from the python script app.py
     display() {
         const {openButton, chatBox, sendButton} = this.args;
 
@@ -24,18 +27,38 @@ class Chatbox {
             }
         })
     }
-
+// open and close the chat button and prints the greetings on initial chat
     toggleState(chatbox) {
         this.state = !this.state;
 
         // show or hides the box
         if(this.state) {
             chatbox.classList.add('chatbox--active')
+            fetch('http://127.0.0.1:5000/greetings', {
+                        method: 'POST',
+                        mode: 'cors',
+                        body: JSON.stringify({ message: ' ' }),
+                        headers: {
+                          'Content-Type': 'application/json'
+                        },
+                      })
+                      .then(r => r.json())
+                      .then(r => {
+                        let msg0 = { name: "Sam", message: r.answer,option:r.options};
+                        this.messages.push(msg0);
+                        this.updateChatText(chatbox)
+                        textField.value = ''
+
+                    }).catch((error) => {
+                        console.error('Error:', error);
+                        this.updateChatText(chatbox)
+                        textField.value = ''
+                      });
         } else {
             chatbox.classList.remove('chatbox--active')
         }
     }
-
+// It will call the predict function from app.py
     onSendButton(chatbox) {
         var textField = chatbox.querySelector('input');
         let text1 = textField.value
@@ -67,15 +90,16 @@ class Chatbox {
             textField.value = ''
           });
     }
-
+// update the answers which it get from the predict function from app.py
     updateChatText(chatbox) {
         var html = '';
         this.messages.slice().reverse().forEach(function(item, index) {
             if (item.name === "Sam")
             {
                 html += '<div class="messages__item messages__item--visitor">' + item.message +
-                '<br><br>' +
-                item.option+
+                '<br><br>' + '<strong>' +
+                 item.option + '<br>'+
+                '</strong>' +
                 '</div>'
             }
             else
@@ -89,6 +113,6 @@ class Chatbox {
     }
 }
 
-
+//Driver code
 const chatbox = new Chatbox();
 chatbox.display();
